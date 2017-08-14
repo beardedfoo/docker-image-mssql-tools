@@ -34,4 +34,17 @@ usage: sqlcmd            [-U login id]          [-P password]
   [-X[1] disable commands, startup script, environment variables [and exit]]
   [-x disable variable substitution]
   [-? show syntax summary]
+$ docker run beardedfoo/mssql-tools bcp -?
+usage: bcp {dbtable | query} {in | out | queryout | format} datafile
+  [-m maxerrors]            [-f formatfile]          [-e errfile]
+  [-F firstrow]             [-L lastrow]             [-b batchsize]
+  [-n native type]          [-c character type]      [-w wide character type]
+  [-N keep non-text native] [-q quoted identifier]
+  [-t field terminator]     [-r row terminator]
+  [-a packetsize]           [-K application intent]
+  [-S server name or DSN if -D provided]             [-D treat -S as DSN]
+  [-U username]             [-P password]
+  [-T trusted connection]   [-v version]             [-R regional enable]
+  [-k keep null values]     [-E keep identity values]
+  [-h "load hints"]         [-d database name]
 ```
