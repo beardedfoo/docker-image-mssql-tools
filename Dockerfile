@@ -4,7 +4,8 @@ MAINTAINER Cyle Riggs <beardedfoo@gmail.com>
 # Add the mssql repos
 RUN apt-get update
 RUN apt-get -y install apt-transport-https curl
-RUN curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
+COPY microsoft.asc /tmp/microsoft.asc
+RUN apt-key add /tmp/microsoft.asc
 RUN curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list | tee /etc/apt/sources.list.d/msprod.list
 RUN apt-get update
 
